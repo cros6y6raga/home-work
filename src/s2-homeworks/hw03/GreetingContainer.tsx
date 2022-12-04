@@ -8,13 +8,27 @@ type GreetingContainerPropsType = {
 }
 
 export const pureAddUser = (name: string, setError: (error: string) => void, setName: (name: string) => void, addUserCallback: (name: string) => void) => {
+    if (name === '') {
+        setError('Ошибка! Введите имя!')
+    }else {
+        addUserCallback(name)
+        setName('')
+    }
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
-export const pureOnBlur = (name: string, setError: (error: string) => void) => { // если имя пустое - показать ошибку
+export const pureOnBlur = (name: string, setError: (error: string) => void) => {
+    if (name === '') {
+        setError('Ошибка! Введите имя!')
+    }
+    // если имя пустое - показать ошибку
 }
 
-export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => { // если нажата кнопка Enter - добавить
+export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: () => void) => {
+    if(e.key==='Enter') {
+        addUser()
+    }
+    // если нажата кнопка Enter - добавить
 }
 
 // более простой и понятный для новичков
@@ -30,8 +44,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName('some name') // need to fix
 
+        setName('some name') // need to fix
         error && setError('')
     }
     const addUser = () => {
