@@ -2,7 +2,7 @@
   "name": "hws2",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://cros6y6raga.github.io/home-work",
+  "homepage": "https://cros6y6raga.github.io/home-work",
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
@@ -20,7 +20,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "8.0.4",
-    "react-router-dom": "6.4.1",
+    "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "redux": "4.2.0",
     "typescript": "4.7.4",
