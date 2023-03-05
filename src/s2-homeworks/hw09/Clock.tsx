@@ -10,21 +10,23 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const start = () => {
+        const id: number = +setInterval(() => {
+            setDate(new Date())
+        }, 1000)
+        setTimerId(id)
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
-
     }
 
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-
     }
 
-    const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
-
+    const onMouseEnter = () => {
+        setShow(true)// пишут студенты // показать дату если наведена мышка
     }
-    const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
-
+    const onMouseLeave = () => {
+        setShow(false)// пишут студенты // показать дату если наведена мышка
     }
 
     const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
