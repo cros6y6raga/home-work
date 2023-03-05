@@ -19,7 +19,9 @@ function Clock() {
     }
 
     const stop = () => {
+        clearInterval(timerId)
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
+        setTimerId(undefined)
     }
 
     const onMouseEnter = () => {
