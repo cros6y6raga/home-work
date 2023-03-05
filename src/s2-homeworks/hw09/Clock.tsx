@@ -38,7 +38,7 @@ function Clock() {
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const stringDay = new Intl.DateTimeFormat('en-US', {weekday: 'long'}).format(date) || <br/>
-    const stringMonth = 'date->month' || <br/> // пишут студенты
+    const stringMonth = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(date) || <br/>
 
     return (
         <div className={s.clock}>
