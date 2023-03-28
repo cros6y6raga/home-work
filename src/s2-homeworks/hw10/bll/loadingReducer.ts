@@ -11,7 +11,6 @@ export const loadingReducer = (state = initState, action: LoadingActionType): ty
             }
         }
         // пишет студент  // need to fix
-
         default:
             return state
     }
